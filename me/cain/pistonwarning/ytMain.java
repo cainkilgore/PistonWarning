@@ -18,13 +18,7 @@ import org.bukkit.event.block.*;
 
 public class ytMain extends JavaPlugin{
 	
-	public String enabledstartup = "Enabled On Startup";
 	public boolean enabled;
-	String pname = "[LCHECKER]";
-	String plugin = "Login Checker";
-	String penable = "Enabled!";
-	String pdisable = "Disabled!";
-	String pluginMainDir = "plugins/easyMOTD";
 	
 	private final ytBlockListener bListener = new ytBlockListener(this);
 Logger log = Logger.getLogger("Minecraft");
@@ -34,6 +28,7 @@ public static PermissionHandler permissionHandler;
 	public void onDisable() {
 		log.info("[PistonWarning] PistonWarning has been disabled.");
 		}
+	
 	public void onEnable() {
 		PluginManager pm = getServer().getPluginManager();
 		setupPermissions();
@@ -41,6 +36,9 @@ public static PermissionHandler permissionHandler;
 		log.info("[PistonWarning] PistonWarning has been enabled.");
 		log.info("[PistonWarning] Created by CainFoool");
 	}
+	
+	// I have no idea if Permissions even works with this -.-
+	
 	private void setupPermissions() {
 	    if (permissionHandler != null) {
 	        return;

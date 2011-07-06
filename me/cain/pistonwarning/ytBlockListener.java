@@ -9,8 +9,8 @@ import org.bukkit.event.block.BlockPlaceEvent;
 
 public class ytBlockListener extends BlockListener {
 	ytMain plugin;
+    Player player;
     
-	Player player;
     public ytBlockListener(ytMain plugin) {
             plugin = this.plugin;
     }
